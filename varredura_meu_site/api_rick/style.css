@@ -1,0 +1,90 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: aquamarine;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #filtros {
+      position: relative;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    #busca {
+      width: 100%;
+      padding: 8px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* Lista de sugestões do autocomplete */
+    #suggestions {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border: 1px solid #ccc;
+      border-top: none;
+      max-height: 200px;
+      overflow-y: auto;
+      z-index: 10;
+      border-radius: 0 0 4px 4px;
+      display: none;
+    }
+
+    #suggestions div {
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    #suggestions div:hover {
+      background-color: #ddd;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    #resultados {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .card {
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 1024px) {
+      body {
+        background-color: brown;
+      }
+
+      #resultados {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      #resultados {
+        grid-template-columns: 1fr;
+      }
+    }
